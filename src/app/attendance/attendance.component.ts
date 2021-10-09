@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Attendance } from 'src/model';
+import { Attendance, StudentType } from 'src/model';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -10,8 +10,9 @@ import { StudentService } from '../student.service';
   styleUrls: ['./attendance.component.css']
 })
 export class AttendanceComponent implements OnInit {
-  attendance:Array<Attendance>=[]
+  attendance:Array<StudentType>=[]
   userForm:FormGroup
+  
   constructor(private service:StudentService,private router:Router) { 
     this.userForm = new FormGroup({
       'studentId': new FormControl('', Validators.required),
@@ -19,14 +20,14 @@ export class AttendanceComponent implements OnInit {
       'present': new FormControl('', [Validators.required]),
      
     })
-    this.service.searchAttendance().subscribe((data) => {
-      this.service.attendance = data
-      
-     })
-    this.attendance=service.attendance
+ 
   }
 
   ngOnInit(): void {
+    this.service.getAllStudents().subscribe((data) => {
+      this.attendance = data
+      this.service.myAttendance=this.attendance
+     })
   }
  submitAttendance()
  {

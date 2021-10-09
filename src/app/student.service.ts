@@ -8,6 +8,7 @@ import { Attendance, StudentType } from 'src/model';
 export class StudentService {
   studentData:Array<StudentType>=[]
   attendance:Array<Attendance>=[]
+  myAttendance:Array<StudentType>=[]
 //  static attendance: Attendance[];
   constructor(private http:HttpClient) { }
 
