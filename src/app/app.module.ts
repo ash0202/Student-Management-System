@@ -13,6 +13,7 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
 import { AttendanceComponent } from './attendance/attendance.component';
 import { SearchAttendanceComponent } from './search-attendance/search-attendance.component';
 import { ShowAttendanceComponent } from './show-attendance/show-attendance.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { ShowAttendanceComponent } from './show-attendance/show-attendance.compo
     DeleteStudentComponent,
     AttendanceComponent,
     SearchAttendanceComponent,
-    ShowAttendanceComponent
+    ShowAttendanceComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

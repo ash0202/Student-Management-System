@@ -46,7 +46,7 @@ export class EditStudentComponent implements OnInit {
     if(this.userForm.valid){
       console.log(this.userForm.value);
       this.service.updateUser(this.id,this.userForm.value).subscribe(() => {
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['student-list'])
       },() => {
         alert("Something Went Wrong")
       })

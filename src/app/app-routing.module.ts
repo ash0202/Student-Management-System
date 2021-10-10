@@ -7,6 +7,7 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { SearchAttendanceComponent } from './search-attendance/search-attendance.component';
 import { ShowAttendanceComponent } from './show-attendance/show-attendance.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:"show-attendance",
     component:ShowAttendanceComponent,
+  },
+  {
+    path:"student-list",
+    component:StudentListComponent,
   }
   
 ];

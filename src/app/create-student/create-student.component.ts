@@ -36,7 +36,7 @@ export class CreateStudentComponent implements OnInit {
     if(this.userForm.valid){
       console.log(this.userForm.value);
       this.service.saveUser(this.userForm.value).subscribe(() => {
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/student-list'])
       },() => {
         alert("Something Went Wrong")
       })
