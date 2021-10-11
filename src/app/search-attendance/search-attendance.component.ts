@@ -22,7 +22,7 @@ export class SearchAttendanceComponent implements OnInit {
 
   ngOnInit(): void {
    
-  
+  this.searchAttendance()
   }
 searchAttendance()
 {

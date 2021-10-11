@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Attendance, StudentType } from 'src/model';
 import { StudentService } from '../student.service';
 import { Chart } from 'chart.js';
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -17,6 +19,7 @@ export class DashboardComponent implements OnInit {
   yvalues:Array<number>=[]
   color="rgba(0, 123, 255,0.2)"
   borderColor='rgba(0, 123, 255,1)'
+
   constructor(private service:StudentService) { 
    // console.log(this.studentList)
   }
@@ -64,7 +67,7 @@ export class DashboardComponent implements OnInit {
         }
       }
     });*/
-    new Chart("mychart", {
+  new Chart("mychart", {
       type: 'bar',
       data: {
           labels: this.xvalues,
